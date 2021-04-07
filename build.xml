@@ -48,12 +48,12 @@
 
     <target name="test"
             description="test">
-        <junit printsummary="yes" haltonfailure="yes">
-            <formatter type="brief" usefile="false" />
-            <batchtest>
-                <fileset dir="${source.test.dir}" includes="*.java" />
-            </batchtest>
-        </junit>
+<!--        <junit printsummary="yes" haltonfailure="yes">-->
+<!--            <formatter type="brief" usefile="false" />-->
+<!--            <batchtest>-->
+<!--                <fileset dir="${source.test.dir}" includes="*.java" />-->
+<!--            </batchtest>-->
+<!--        </junit>-->
         <javac srcdir="${test}" destdir="${build}" classpathref="classpath" />
     </target>
 </project>
