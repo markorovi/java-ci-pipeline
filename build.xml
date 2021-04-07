@@ -52,7 +52,7 @@
             <test name="com.edu.BaseTest.MyTest"/>
             <classpath>
                 <pathelement location="${build}"/>
-                <pathelement location="Path to junit-4.10.jar" />
+                <pathelement location="classpath" />
             </classpath>
 
             <batchtest fork="yes" todir="${output.test.dir}">
