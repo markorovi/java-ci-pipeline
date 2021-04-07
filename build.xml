@@ -17,6 +17,10 @@
         <pathelement location="${lib}/junit-4.11.jar" />
     </path>
 
+    <path id="classPath">
+        <pathelement location="${lib}/junit-4.11.jar" />
+    </path>
+
     <target name="init">
         <!-- Create the time stamp -->
         <tstamp/>
@@ -49,6 +53,9 @@
     <target name="test"
             description="test">
         <junit printsummary="yes" haltonfailure="yes">
+            <classpath path="${lib}">
+                <path refid="classPath" />
+            </classpath>
             <formatter type="brief" usefile="false" />
             <batchtest>
                 <fileset dir="${source.test.dir}" includes="*.java" />
