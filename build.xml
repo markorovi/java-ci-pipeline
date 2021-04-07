@@ -55,14 +55,5 @@
 
     <target name="test"
             description="test">
-        <junit printsummary="yes" haltonfailure="yes">
-            <classpath>
-                <path refid="junit.class.path"/>
-            </classpath>
-            <formatter type="brief" usefile="false" />
-            <batchtest>
-                <fileset dir="${source.test.dir}" includes="*.java" />
-            </batchtest>
-        </junit>
     </target>
 </project>
