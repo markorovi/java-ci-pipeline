@@ -54,6 +54,6 @@
 <!--                <fileset dir="${source.test.dir}" includes="*.java" />-->
 <!--            </batchtest>-->
 <!--        </junit>-->
-        <javac srcdir="${test}" destdir="${build}" classpathref="classpath" />
+<!--        <javac srcdir="${test}" destdir="${build}" classpathref="classpath" />-->
     </target>
 </project>
