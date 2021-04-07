@@ -52,7 +52,7 @@
             <test name="com.edu.BaseTest.MyTest"/>
             <classpath>
                 <pathelement location="${build}"/>
-                <pathelement location="classpath" />
+                <pathelement location="${lib}/junit-4.11.jar" />
             </classpath>
 
             <batchtest fork="yes" todir="${output.test.dir}">
