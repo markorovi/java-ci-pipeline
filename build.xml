@@ -6,6 +6,16 @@
     <property name="src" location="src"/>
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
+    <property name="test" location="test/Scanner"/>
+    <property name="lib" location="dist/lib"/>
+    <property name="source.test.dir" location="test/Scanner" />
+    <property name="output.test.dir" location="test" />
+
+    <path id="classpath">
+        <pathelement location="${build}" />
+        <pathelement location="${lib}/hamcrest-core-1.3.jar" />
+        <pathelement location="${lib}/junit-4.11.jar" />
+    </path>
 
     <target name="init">
         <!-- Create the time stamp -->
@@ -38,5 +48,21 @@
 
     <target name="test"
             description="test">
+        <junit printsummary="on">
+            <test name="com.edu.BaseTest.MyTest"/>
+            <classpath>
+                <pathelement location="${build}"/>
+                <pathelement location="Path to junit-4.10.jar" />
+            </classpath>
+
+            <batchtest fork="yes" todir="${output.test.dir}">
+                <!-- The fileset element specifies which tests to run. -->
+                <!-- There are many different ways to specify filesets, this
+                     is just one example. -->
+                <fileset dir="${source.test.dir}" includes="**/CalculatorTest.java"/>
+                <fileset dir="${source.test.dir}" includes="**/ScanTest.java"/>
+            </batchtest>
+        </junit>
+        <javac srcdir="${test}" destdir="${build}" classpathref="classpath" />
     </target>
 </project>
