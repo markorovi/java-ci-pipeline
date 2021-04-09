@@ -16,4 +16,6 @@ public class Calculator {
     public static void Division(int i, int j){
         System.out.println("Result = " + (i / j));
     }
+
+    //Test
 }
